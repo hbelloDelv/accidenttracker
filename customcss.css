@@ -1,0 +1,71 @@
+li{
+    
+    display: inline-block;
+    padding: 10px 10px 10px 25px;
+    font-size: 20px;  
+}
+
+a:link {
+    color: #ffff;
+   
+}
+
+
+.nav{
+border: 1px solid white;
+background-color: rgb(142, 157, 161);
+margin-top: 5px;
+border-bottom-width: 5px;
+}
+
+
+
+h3{
+    
+    color: rgb(16, 91, 204);
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    margin:0;padding:0;
+}
+
+
+#bottomSpace{
+    margin-bottom: 0;
+    float: right;
+}
+
+#footer_img{
+    background-color: rgb(142, 157, 161);
+    margin-top: 2%;
+    color: white;
+    padding: 15px 20px 20px 20px;
+    font-family: Calibri;
+    font-size: 15px;
+}
+
+body{
+   max-width:  100%;
+   max-height:  100vh;
+}
+
+
+
+.paragStyle{
+width: 110%;
+text-align: justify;
+margin: 5px 0 20px  0;
+
+}
+
+
+.formWrapper{
+    
+    padding: 20px 20px 20px 20px ;
+    background-color: #e9ecef;  
+  }
+
+
+
+#giveGap{
+
+    margin-bottom: 2%;
+}
