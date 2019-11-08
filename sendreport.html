@@ -1,6 +1,6 @@
 
 <!DOCTYPE html>
-<title>Home</title>
+<title>Report</title>
 <html lang="en">
   <head>
     <meta charset="utf-8">
@@ -28,7 +28,7 @@
       <div id="giveGap">
       <nav class="nav navbar-fixed-top">
       <ul>
-         <li><a href="#.html">Home</a></li>
+         <li><a href="index.html">Home</a></li>
           <li><a href="about.html">News</a></li>
           <li><a href="sendreport.html">Send report</a></li>
           <li><a href="categories.html">Safety tips</a></li>
@@ -43,7 +43,7 @@
             <div class="row">
                     <div class="col-sm-4">
                                     <div style="margin-top: 8%;">
-                                        <img src="./images/image3.jpg" alt="display image" class="img-fluid img-responsive">
+                                        <img src="./images/image2.jpg" alt="display image" class="img-fluid img-responsive">
                                     </div>
                                     <div>
                                        <p style="text-align:justify"  style="font-family:  Georgia,  Cochin, Cambria, Times, 'Times New Roman', serif;">
@@ -73,7 +73,7 @@
                         <div class="row">     
                             <div class="col-sm-12">
                                 <center><h6 style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">
-                                  <span style="color: #64E986;">Trackerr|</span> Please!!! help us find you as you travels</h6></center>
+                                  <span style="color: #64E986;">Trackerr|</span> Please!!! help us find the accident scene</h6></center>
                             </div>
                         </div>
                             
@@ -81,46 +81,54 @@
                                 <form name="loginUser" >
                                   
                                 <div class="form-group">
-                                  <label for="first name">Driver's full name:</label>
-                                  <input type="text" class="form-control" id="firstName" >
+                                  <label for="first name">Accident location:</label>
+                                  <input type="text" class="form-control" id="firstName" placeholder="Please enter location" >
                                 </div>
                     
                                 <div class="form-group">
-                                        <label for="first name">Driver's National ID:</label>
-                                        <input type="number" class="form-control" id="firstName" >
+                                        <label for="first name">Brief description (Optional):</label>
+                                        <textarea class="form-control" id="firstName">
+                                         
+                                        </textarea>
                                       </div>
-
+                                
                                 <div class="form-group">
-                                  <label for="second Name">Passengers:</label>
-                                  <input type="checkbox"  id="secondName">
+                                    <label for="first name">Select State</label>
+                                    <select name="cars" class="form-control">
+                                      <option value="select">Select</option>
+                                      <option value="saab">Kaduna</option>
+                                      <option value="fiat">Jos</option>
+                                      <option value="audi">Lagos</option>
+                                      <option value="audi">Uyo</option>
+                                    </select>
                                 </div>
-                    
-                    
-                                <div class="form-group">
-                                    <label for="second Name">Vehicle's model:</label>
-                                    <input type="text" class="form-control" id="otherName" >
-                                  </div>
-                    
-                                  <div class="form-group">
-                                    <label for="first name">Vehicle's plate number:</label>
-                                    <input type="text" class="form-control" id="Subject" min="3">
-                                  </div>
-                      
-                                  <div class="form-group">
-                                    <label for="second Name">Vehicle's colour</label>
-                                    <input type="text" class="form-control" id="secondName" min="3">
-                                  </div>
-                      
-                                  <div class="form-group">
-                                        <label for="second Name">From</label>
-                                        <input type="text" class="form-control" id="secondName" placeholder="Example Kaduna">
-                                      </div>
 
-                                    <div class="form-group">
-                                            <label for="second Name">To</label>
-                                            <input type="text" class="form-control" id="secondName" placeholder="Example Jos">
-                                          </div>
-                                  
+                                <div class="form-group">
+                                    <label for="second Name">Upload image (Optional):</label>
+                                    <br>
+                                    <input type="file" name="myFile" multiple class="form-control">
+                                  </div>
+
+                                  <div class="form-group">
+                                    <label for="second Name">Report to:</label>
+                                    <br>
+                                    <input type="checkbox"  id="frcn">  <label for="second Name">FRCN</label> 
+                                    <br>
+                                    <input type="checkbox"  id="police">  <label for="second Name">Police</label>
+                                    <br>
+                                    <input type="checkbox"  id="redCross">  <label for="second Name">Red Cross</label> 
+                                    <br>
+                                    <input type="checkbox"  id="civilDef">  <label for="second Name">Civil Defence</label>
+                                    <br>
+                                    <input type="checkbox"  id="army">  <label for="second Name">Army</label>  
+                                  </div>
+                      
+
+                    
+                                  <div class="form-group">
+                                    <label for="first name">Reporter's full name or ID:</label>
+                                    <input type="text" class="form-control" id="Subject" placeholder="Optional">
+                                  </div>
                                  
                                 <button type="submit" class="btn btn-success" onClick = "return myForm()">Submit</button>
                               </form>
