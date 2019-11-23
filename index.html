@@ -13,8 +13,7 @@
   <body>
     <div class="container">
       <div class="row" style="margin-top:4%;">
-              <div class="col-sm-8">
-              
+              <div class="col-sm-8" >   
               <h3><span style="color: #64E986;">Trackerr|</span> Nigeria Road Accident Victims log</h3>
               </div> 
               <div class="col-sm-4">
@@ -34,7 +33,18 @@
           <li><a href="categories.html">Safety tips</a></li>
           <li><a href="contactus.html">Contact us</a></li>
           <li><a href="login.html">About us</a></li>
-          <li><a href="login.html">Login</a></li>
+       
+          <li class="dropdown">
+            <a class="dropdown-toggle" data-toggle="dropdown" href="#">Login<span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a href="#">FRSC</a></li>
+              <li><a href="#">RED CROSS</a></li>
+              <li><a href="#">POLICE</a></li>
+              <li><a href="#">CIVIL DEFENCE</a></li>
+              <li><a href="#">ARMY</a></li>
+            </ul>
+          </li>
+        </ul>
       </nav>
       </div>
 </div>  
@@ -43,7 +53,8 @@
             <div class="row">
                     <div class="col-sm-4">
                                     <div style="margin-top: 8%;">
-                                        <img src="./images/image3.jpg" alt="display image" class="img-fluid img-responsive">
+                                      
+                                      <img src="./images/image3.jpg" alt="display image" class="img-fluid img-responsive">
                                     </div>
                                     <div>
                                        <p style="text-align:justify"  style="font-family:  Georgia,  Cochin, Cambria, Times, 'Times New Roman', serif;">
@@ -78,47 +89,46 @@
                         </div>
                             
                         <div class="formWrapper">
-                                <form name="loginUser" >
-                                  
+                                <form action="tracktravellers.php" method="POST">  
                                 <div class="form-group">
                                   <label for="first name">Driver's full name:</label>
-                                  <input type="text" class="form-control" id="firstName" >
+                                  <input type="text" class="form-control" name="driverName">
                                 </div>
                     
                                 <div class="form-group">
                                         <label for="first name">Driver's National ID:</label>
-                                        <input type="number" class="form-control" id="firstName" >
+                                        <input type="number" class="form-control" name="driverID">
                                       </div>
 
                                 <div class="form-group">
                                   <label for="second Name">Passengers:</label>
-                                  <input type="checkbox"  id="secondName">
+                                  <input type="checkbox" >
                                 </div>
                     
                     
                                 <div class="form-group">
                                     <label for="second Name">Vehicle's model:</label>
-                                    <input type="text" class="form-control" id="otherName" >
+                                    <input type="text" class="form-control" name="vehicleModel" >
                                   </div>
                     
                                   <div class="form-group">
                                     <label for="first name">Vehicle's plate number:</label>
-                                    <input type="text" class="form-control" id="Subject" min="3">
+                                    <input type="text" class="form-control" name="VehiclePlateNum">
                                   </div>
                       
                                   <div class="form-group">
                                     <label for="second Name">Vehicle's colour</label>
-                                    <input type="text" class="form-control" id="secondName" min="3">
+                                    <input type="text" class="form-control" name="vehicleColor">
                                   </div>
                       
                                   <div class="form-group">
                                         <label for="second Name">From</label>
-                                        <input type="text" class="form-control" id="secondName" placeholder="Example Kaduna">
+                                        <input type="text" class="form-control"  placeholder="Example Kaduna" name="fromWhere">
                                       </div>
 
                                     <div class="form-group">
                                             <label for="second Name">To</label>
-                                            <input type="text" class="form-control" id="secondName" placeholder="Example Jos">
+                                            <input type="text" class="form-control" placeholder="Example Jos" name="toWhere">
                                           </div>
                                   
                                  
@@ -133,6 +143,14 @@
                     <p><b>Click-on Kaduna Digital Skills Programme  2019 &#174 Capstone project by H.Bello </b></p>
                 </footer>
     </div>
-   
+    <script>
+      $(document).ready(function(){
+        $('.dropdown a.test').on("click", function(e){
+          $(this).next('ul').toggle();
+          e.stopPropagation();
+          e.preventDefault();
+        });
+      });
+      </script>
     </body>
 </html>

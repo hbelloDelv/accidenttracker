@@ -9,6 +9,10 @@ a:link {
     color: #ffff;
    
 }
+li a:hover{
+    text-decoration: none;
+    color: lightgreen;
+}
 
 
 .nav{

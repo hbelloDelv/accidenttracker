@@ -8,7 +8,10 @@
     <link rel="stylesheet" href="css/bootstrap.css">
     <link href="customcss.css" rel="stylesheet">
     <link href="css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
+    <script src="jquery-3.4.1.min.js"></script>
+    
   </head>
   <body>
     <div class="container">
@@ -42,9 +45,9 @@
     <div class="container">
             <div class="row">
                     <div class="col-sm-4">
-                                    <div style="margin-top: 8%;">
-                                        <img src="./images/image2.jpg" alt="display image" class="img-fluid img-responsive">
-                                    </div>
+                      <div style="margin-top: 8%;">
+                        <img src="./images/image2.jpg" alt="display image" class="img-fluid img-responsive">
+                    </div>
                                     <div>
                                        <p style="text-align:justify"  style="font-family:  Georgia,  Cochin, Cambria, Times, 'Times New Roman', serif;">
                                          A manufacturing company produces products. 
@@ -78,28 +81,29 @@
                         </div>
                             
                         <div class="formWrapper">
-                                <form name="loginUser" >
+                                <form action="sendReport.php" method="POST" >
                                   
                                 <div class="form-group">
                                   <label for="first name">Accident location:</label>
-                                  <input type="text" class="form-control" id="firstName" placeholder="Please enter location" >
+                                  <input type="text" class="form-control"  placeholder="Please enter location" name="accLocation" >
                                 </div>
                     
                                 <div class="form-group">
                                         <label for="first name">Brief description (Optional):</label>
-                                        <textarea class="form-control" id="firstName">
+                                        <textarea class="form-control" name="briefDescr">
                                          
                                         </textarea>
                                       </div>
                                 
                                 <div class="form-group">
                                     <label for="first name">Select State</label>
-                                    <select name="cars" class="form-control">
+                                    <select name="states" class="form-control">
                                       <option value="select">Select</option>
-                                      <option value="saab">Kaduna</option>
-                                      <option value="fiat">Jos</option>
-                                      <option value="audi">Lagos</option>
-                                      <option value="audi">Uyo</option>
+                                      <option value="Kaduna">Kaduna</option>
+                                      <option value="Jos">Jos</option>
+                                      <option value="Lagos">Lagos</option>
+                                      <option value="Uyo">Uyo</option>
+                                      <option value="Ebonyi">Ebonyi</option>
                                     </select>
                                 </div>
 
@@ -112,7 +116,7 @@
                                   <div class="form-group">
                                     <label for="second Name">Report to:</label>
                                     <br>
-                                    <input type="checkbox"  id="frcn">  <label for="second Name">FRCN</label> 
+                                    <input type="checkbox"  id="frcn">  <label for="second Name">FRSC</label> 
                                     <br>
                                     <input type="checkbox"  id="police">  <label for="second Name">Police</label>
                                     <br>
@@ -127,20 +131,36 @@
                     
                                   <div class="form-group">
                                     <label for="first name">Reporter's full name or ID:</label>
-                                    <input type="text" class="form-control" id="Subject" placeholder="Optional">
+                                    <input type="text" class="form-control"  placeholder="Optional" name="reporter">
                                   </div>
                                  
                                 <button type="submit" class="btn btn-success" onClick = "return myForm()">Submit</button>
                               </form>
                             </div>
                     </div>    
-            </div>
-            
-                    
+            </div>    
                 <footer id="footer_img">
                     <p><b>Click-on Kaduna Digital Skills Programme  2019 &#174 Capstone project by H.Bello </b></p>
                 </footer>
     </div>
-   
+    <script>
+      (function(){
+              var imgLen = document.getElementById('imgGallary');
+              var images = imgLen.getElementsByTagName('img');
+              var counter = 1;
+      
+              if(counter <= images.length){
+                  setInterval(function(){
+                      images[0].src = images[counter].src;
+                      console.log(images[counter].src);
+                      counter++;
+      
+                      if(counter === images.length){
+                          counter = 1;
+                      }
+                  },4000);
+              }
+      })();
+      </script>
     </body>
 </html>
