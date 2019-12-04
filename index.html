@@ -100,9 +100,9 @@
                                         <input type="number" class="form-control" name="driverID">
                                       </div>
 
-                                <div class="form-group">
+                                <div class="form-group" id="afterPass">
                                   <label for="second Name">Passengers:</label>
-                                  <input type="checkbox" >
+                                  <input type="checkbox" onClick="checkMe()">
                                 </div>
                     
                     
@@ -144,6 +144,73 @@
                 </footer>
     </div>
     <script>
+
+     function checkMe(){
+	var enterPass = prompt("Enter number of passanger")
+
+	for(var i = 1; i<=enterPass; i++){
+
+	//create div element and bootstrap class
+	var createDiv = document.createElement('div');
+	createDiv.className = 'form-group';
+	//create text box element and the attributes
+	var inputBox = document.createElement('input');
+      inputBox.setAttribute("type", "text");
+      inputBox.setAttribute("class", "form-control");
+      inputBox.setAttribute("placeholder", "Enter passenger's full name");
+      inputBox.setAttribute("name", "passenger[]");
+
+	//create label
+	var newlabel = document.createElement("Label");
+    	//newlabel.setAttribute("for",input);
+      	newlabel.innerHTML = "Passanger " + i.toString();
+      	createDiv.appendChild(newlabel);
+
+  /*      
+	//attach textbox to the div
+	createDiv.appendChild(inputBox);
+
+	//Attach element to form, how?
+	var addToForm = document.querySelector('.formWrapper #afterPass');
+	addToForm.appendChild(createDiv);
+*/
+
+//---------------------- Second input box-----------------------------------
+//create div element and bootstrap class
+var createDiv2 = document.createElement('div');
+createDiv2.className = 'form-group'
+
+
+//create text box element and the attributes
+var inputBox2 = document.createElement('input');
+inputBox2.setAttribute("type", "text");
+inputBox2.setAttribute("class", "form-control");
+inputBox2.setAttribute("placeholder", "Enter passenger's ID");
+inputBox2.setAttribute("name", "id[]");
+
+//create label
+var newlabel = document.createElement("Label");
+      newlabel.innerHTML = "Passanger ID";
+      createDiv2.appendChild(newlabel);
+
+
+
+//attach textbox to the div
+createDiv.appendChild(inputBox);
+createDiv2.appendChild(inputBox2);
+
+var addToForm = document.querySelector('.formWrapper #afterPass');
+addToForm.appendChild(createDiv);
+addToForm.appendChild(createDiv2);
+
+
+
+}
+console.log(createDiv)
+
+}
+
+
       $(document).ready(function(){
         $('.dropdown a.test').on("click", function(e){
           $(this).next('ul').toggle();
